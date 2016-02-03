@@ -1,17 +1,18 @@
-class Vector
+Vector = require('@datatypes/vector')
+
+class Point
 	constructor: (@x = 0, @y = 0, @z = 0) ->
-		@isNormalized = undefined
 		return @
 
 	@fromObject: (object) ->
-		return new Vector(
+		return new Point(
 			object.x,
 			object.y,
 			object.z
 		)
 
 	@fromArray: (array) ->
-		return new Vector(
+		return new Point(
 			array[0],
 			array[1],
 			array[2]
@@ -24,51 +25,15 @@ class Vector
 			z: @z
 		}
 
-	add: (vector) ->
-		@x += vector.x
-		@y += vector.y
-		@z += vector.z
-
-		return @
-
-	subtract: (vector) ->
-		@x -= vector.x
-		@y -= vector.y
-		@z -= vector.z
-
-		return @
-
-	scaleUniformlyBy: (scalar) ->
-		@x *= scalar
-		@y *= scalar
-		@z *= scalar
-
-		return @
-
-	scaleBy: ({x = 1, y = 1, z = 1} = {}) ->
-		@x *= x
-		@y *= y
-		@z *= z
-
-		return @
-
-	length: () ->
-		return Math.sqrt (@x * @x) + (@y * @y) + (@z * @z)
-
-	euclideanDistanceTo: (vector) ->
-		return @subtract(vector).length()
-
-	normalize: () ->
-		@isNormalized = true
-		@scaleUniformlyBy 1 / @length()
-		return @
-
-	crossProduct: (vector) ->
+	subtract: (point) ->
 		return new Vector(
-			(@y * vector.z) - (@z * vector.y)
-			(@z * vector.x) - (@x * vector.z)
-			(@x * vector.y) - (@y * vector.x)
+			@x - point.x,
+			@y - point.y,
+			@z - point.z
 		)
 
+	euclideanDistanceTo: (point) ->
+		return @subtract(point).length()
 
-module.exports = Vector
+
+module.exports = Point

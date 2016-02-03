@@ -1,16 +1,16 @@
-# Vector
+# Point
 
-Class for 3D vectors
+Class for points in a 3D space.
 
 
 ## Installation
 
 ```sh
-npm install --save @datatypes/vector
+npm install --save @datatypes/point
 ```
 
 
 ## Usage
 
 Check out the [tests](./test/main.coffee) for an extensive overview
-on how to use vector.
+on how to use point.

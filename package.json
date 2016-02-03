@@ -1,7 +1,7 @@
 {
-  "name": "@datatypes/vector",
-  "version": "0.0.0",
-  "description": "Class for 3D vectors",
+  "name": "@datatypes/point",
+  "version": "0.1.0",
+  "description": "Class for points in 3D space",
   "main": "index.js",
   "scripts": {
     "test": "npm run build && ava --verbose",
@@ -10,24 +10,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/datatypesjs/vector.git"
+    "url": "git+https://github.com/datatypesjs/point.git"
   },
   "keywords": [
     "datatype",
-    "vector"
+    "point"
   ],
   "author": "Adrian Sieber <mail@adriansieber.com> (adriansieber.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/datatypesjs/vector/issues"
+    "url": "https://github.com/datatypesjs/point/issues"
   },
-  "homepage": "https://github.com/datatypesjs/vector#readme",
+  "homepage": "https://github.com/datatypesjs/point#readme",
+  "dependencies": {
+    "@datatypes/vector": "^0.2.0"
+  },
   "devDependencies": {
     "ava": "^0.11.0",
     "coffee-script": "^1.10.0"
   },
   "directories": {
     "test": "test"
-  },
-  "dependencies": {}
+  }
 }
