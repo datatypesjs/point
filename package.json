@@ -1,0 +1,33 @@
+{
+  "name": "@datatypes/vector",
+  "version": "0.0.0",
+  "description": "Class for 3D vectors",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run build && ava --verbose",
+    "build": "coffee -c .",
+    "prepublish": "npm test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datatypesjs/vector.git"
+  },
+  "keywords": [
+    "datatype",
+    "vector"
+  ],
+  "author": "Adrian Sieber <mail@adriansieber.com> (adriansieber.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/datatypesjs/vector/issues"
+  },
+  "homepage": "https://github.com/datatypesjs/vector#readme",
+  "devDependencies": {
+    "ava": "^0.11.0",
+    "coffee-script": "^1.10.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {}
+}
