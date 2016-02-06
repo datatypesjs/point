@@ -26,6 +26,7 @@ runTest 'Instantiates a point from an array', (test) ->
 
 runTest 'Outputs JSON', (test) ->
 	point = new Point(1, 2, 3)
+	point.uselessProperty = 'useless'
 	test.same(JSON.stringify(point), '{"x":1,"y":2,"z":3}')
 
 

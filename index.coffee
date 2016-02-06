@@ -11,7 +11,7 @@ class Point
 			object.z
 		)
 
-	toJSON: @toObject
+	toJSON: () -> @toObject()
 
 	@fromArray: (array) ->
 		return new Point(
