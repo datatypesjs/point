@@ -24,6 +24,11 @@ runTest 'Instantiates a point from an array', (test) ->
 	test.same(point.toObject(), {x: 1, y: 2, z: 3})
 
 
+runTest 'Outputs JSON', (test) ->
+	point = new Point(1, 2, 3)
+	test.same(JSON.stringify(point), '{"x":1,"y":2,"z":3}')
+
+
 runTest 'Subtracts a point', (test) ->
 	pointA = new Point(4, 2, 0)
 	pointB = new Point(3, 5, 7)
